@@ -29,13 +29,13 @@ const tabs = [
 const TabItem = (props) => {
   return (
     <div className="tab-item">
-      <Link className="tab-icon" style={{ color: props.selected ? 'white' : undefined }} to={props.href}>
+      <Link className="tab-icon" style={{ color: props.selected ? 'var(--off-white)' : undefined }} to={props.href}>
         {props.iconFilled}
         {props.name === 'Inbox' && (
           <div className="badge">99+</div>
         )}
       </Link>
-      <div className="tab-name" style={{ color: props.selected ? 'white' : undefined }}>{props.name}</div>
+      <div className="tab-name" style={{ color: props.selected ? 'var(--off-white)' : undefined }}>{props.name}</div>
     </div>
   );
 };
@@ -48,7 +48,15 @@ export const Layout = () => {
       <div className="content">
         <Outlet />
       </div>
-      <div className="tabs">
+      <motion.div
+        className="tabs"
+        animate={{
+          backgroundColor: location.pathname === '/profile' || location.pathname === '/inbox' ? 'var(--secondary)' : 'var(--bg-color)'
+        }}
+        transition={{
+          duration: 0.15,
+        }}
+      >
         {tabs.map((tab, i) => (
           <TabItem
             key={i}
@@ -59,7 +67,7 @@ export const Layout = () => {
             href={tab.href}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

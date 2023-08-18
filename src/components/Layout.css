@@ -5,20 +5,21 @@
   grid-template-areas: 'content' 'tabs';
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .content {
   grid-area: 'content';
   min-height: 100%;
-  overflow: hidden;
 }
 
 .tabs {
   grid-area: 'tabs';
-  height: 7rem;
+  height: var(--bottom-tabs-height);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 99;
   background-color: var(--bg-color);
 }
 
@@ -44,7 +45,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, 0);
+  transform: translate(60%, -10%);
   display: flex;
   justify-content: center;
   align-items: center;

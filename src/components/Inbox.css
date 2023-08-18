@@ -1,0 +1,132 @@
+.inbox-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+}
+
+.inbox-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.friends-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 9rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.friend-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.friend-bar-item-pfp {
+  max-width: 6rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 99rem;
+  overflow: hidden;
+}
+
+.friend-bar-item-name {
+  opacity: 0.8;
+  color: var(--off-white);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.create-container {
+  position: absolute;
+  bottom: -1.75rem;
+  right: -1.75rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 4px solid var(--secondary);
+  border-radius: 99rem;
+  font-size: 2rem;
+  background: linear-gradient(150deg, rgba(0,153,236,1) 0%, rgba(0,255,216,1) 100%);
+}
+
+.messages-container {
+  width: 100%;
+  height: 100%;
+}
+
+.friend-message-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'pfp' 'middle' 'extras';
+  width: 100%;
+  height: 8rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.friend-message-item-pfp-container {
+  grid-area: 'pfp';
+  height: 6rem;
+}
+
+.friend-message-item-pfp {
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 99rem;
+}
+
+.friend-message-middle {
+  grid-area: 'middle';
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.friend-message-item-name {
+  display: inline;
+  font-size: 1.6rem;
+}
+
+.friend-message-item-description {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+.friend-message-item-extras-container {
+  grid-area: 'extras';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 8rem;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.friend-message-item-time {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+.friend-message-item-badge {
+  padding: 0.15rem 0.5rem;
+  border-radius: 99rem;
+  background-color: var(--red);
+}

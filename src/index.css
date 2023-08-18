@@ -4,7 +4,12 @@
   --red: #FE2C55;
   --cyan: #25F4EE;
   --yellow: #FFBF00;
-  --bg-color: 	#040404;
+  --bg-color: #040404;
+  --secondary: #171717;
+  --off-white: #ededed;
+
+  --border-color: #242424;
+  
   background-color: var(--bg-color);
 
   --display-text-size: 4.5rem;
@@ -20,13 +25,15 @@
 
   --display-text-family: 'Syne', sans-serif;
   
-  --regular-text-color: #FFF;
+  --regular-text-color: var(--off-white);
   --regular-text-font-family: 'Rubik', sans-serif;
 
   color: var(--regular-text-color);
   font-family: var(--regular-text-font-family);
   font-weight: var(--body-text-weight);
   font-size: 62.5%;
+
+  --bottom-tabs-height: 6.5rem;
 }
 
 * {
