@@ -303,7 +303,9 @@ export const Home = () => {
           {TIKTOKS.map((tiktok, i) => {
             return (
               <div key={tiktok.user + i} className="tiktok-container" onClick={videoPaused ? () => handleUnpause(i) : () => handlePause(i)}>
-                <video ref={(el) => videoRefs.current[i] = el} className="tiktok-video" src={tiktok.src} loop />
+                <video ref={(el) => videoRefs.current[i] = el} className="tiktok-video" loop>
+                  <source src={tiktok.src} type="video/mp4"/>
+                </video>
               </div>
             );
           })}
